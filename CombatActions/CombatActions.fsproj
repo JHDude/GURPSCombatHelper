@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Library1.fs" />
+    <Compile Include="CombatActionsTypes.fs" />
+    <Compile Include="CombatActions.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
   <PropertyGroup>
