@@ -21,18 +21,27 @@ namespace GURPSCommonConcepts
         /// </summary>
         public int modifier;
 
-        public DiceAndModifier()
+        /// <summary>
+        /// Creates a new dummy Dice And Modifier
+        /// </summary>
+        public DiceAndModifier():this(1,0)
         {
-            numDice = 1;
-            modifier = 1;
         }
 
+        /// <summary>
+        /// Creates a new Dice And Modifier object
+        /// </summary>
+        /// <param name="die">The number of dice to roll</param>
+        /// <param name="mod">What to add to the die roll</param>
         public DiceAndModifier(int die, int mod)
         {
             numDice = die;
             modifier = mod;
         }
 
+        /// <summary>
+        /// Linguistic representation of Dice And Modifier
+        /// </summary>
         public string DAMLinguistic
         {
             get
@@ -54,6 +63,10 @@ namespace GURPSCommonConcepts
             }
         }
         
+        /// <summary>
+        /// Calculates the amount of damage the Dice And Modifier object will do
+        /// </summary>
+        /// <returns>A raw damage value</returns>
         public int RollDAM()
         {
             return modGlobal.RollMultiple(numDice) + modifier;
