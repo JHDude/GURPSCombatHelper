@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GURPSCombatHelper
 {
-    class BattleLog
+    public class BattleLog
     {
         /// <summary>
         /// Maximum number of lines allowed in the logs
@@ -26,7 +26,7 @@ namespace GURPSCombatHelper
         /// <summary>
         /// Creates a new Battle Log
         /// </summary>
-        BattleLog()
+        public BattleLog()
         {
             mStaleLog = new List<string>();
             mFreshLog = new List<string>();
@@ -45,7 +45,7 @@ namespace GURPSCombatHelper
         /// Indicates if there are any fresh logs available
         /// </summary>
         /// <returns>True, if there is a fresh log, False, otherwise</returns>
-        private bool anyFresh()
+        public bool anyFresh()
         {
             if (mFreshLog.Count > 0)
             {
@@ -72,9 +72,40 @@ namespace GURPSCombatHelper
         /// Add a new log to the logger. It hasn't been displayed, so it's Fresh
         /// </summary>
         /// <param name="newLog">The log message to add</param>
-        private void addLog(string newLog)
+        public void addLog(string newLog)
         {
             mFreshLog.Add(newLog);
+        }
+
+        /// <summary>
+        /// Returns all stored logs
+        /// </summary>
+        /// <param name="convertToStale">if true, all Fresh logs will be made Stale</param>
+        /// <returns></returns>
+        public List<string> getAllLogs(bool convertToStale = true)
+        {
+            List<string> output = new List<string>(mStaleLog);
+            output.AddRange(mFreshLog);
+            if (convertToStale)
+            {
+                makeStale();
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Returns all fresh logs
+        /// </summary>
+        /// <param name="convertToStale">If true, all Fresh logs will be made Stale</param>
+        /// <returns></returns>
+        public List<string> getFreshLogs(bool convertToStale = true)
+        {
+            List<string> output = new List<string>(mFreshLog);
+            if (convertToStale)
+            {
+                makeStale();
+            }
+            return output;
         }
         
 

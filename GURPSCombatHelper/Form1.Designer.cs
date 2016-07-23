@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lvwTurnOrder = new System.Windows.Forms.ListView();
             this.grbTurnOrder = new System.Windows.Forms.GroupBox();
             this.grbActors = new System.Windows.Forms.GroupBox();
+            this.cmdAddActor = new System.Windows.Forms.Button();
             this.grbActions = new System.Windows.Forms.GroupBox();
             this.cmdAttack = new System.Windows.Forms.Button();
             this.grbBattleLog = new System.Windows.Forms.GroupBox();
             this.txtBattleLog = new System.Windows.Forms.RichTextBox();
-            this.cmdAddActor = new System.Windows.Forms.Button();
+            this.BattleTimer = new System.Windows.Forms.Timer(this.components);
             this.grbTurnOrder.SuspendLayout();
             this.grbActors.SuspendLayout();
             this.grbActions.SuspendLayout();
@@ -74,6 +76,16 @@
             this.grbActors.TabIndex = 2;
             this.grbActors.TabStop = false;
             this.grbActors.Text = "Actors";
+            // 
+            // cmdAddActor
+            // 
+            this.cmdAddActor.Location = new System.Drawing.Point(9, 25);
+            this.cmdAddActor.Name = "cmdAddActor";
+            this.cmdAddActor.Size = new System.Drawing.Size(82, 32);
+            this.cmdAddActor.TabIndex = 1;
+            this.cmdAddActor.Text = "Add";
+            this.cmdAddActor.UseVisualStyleBackColor = true;
+            this.cmdAddActor.Click += new System.EventHandler(this.cmdAddActor_Click);
             // 
             // grbActions
             // 
@@ -122,15 +134,9 @@
             this.txtBattleLog.TabIndex = 0;
             this.txtBattleLog.Text = "I live once more...";
             // 
-            // cmdAddActor
+            // BattleTimer
             // 
-            this.cmdAddActor.Location = new System.Drawing.Point(9, 25);
-            this.cmdAddActor.Name = "cmdAddActor";
-            this.cmdAddActor.Size = new System.Drawing.Size(82, 32);
-            this.cmdAddActor.TabIndex = 1;
-            this.cmdAddActor.Text = "Add";
-            this.cmdAddActor.UseVisualStyleBackColor = true;
-            this.cmdAddActor.Click += new System.EventHandler(this.cmdAddActor_Click);
+            this.BattleTimer.Tick += new System.EventHandler(this.BattleTimer_Tick);
             // 
             // frmMainCombat
             // 
@@ -161,6 +167,7 @@
         private System.Windows.Forms.GroupBox grbBattleLog;
         private System.Windows.Forms.RichTextBox txtBattleLog;
         private System.Windows.Forms.Button cmdAddActor;
+        private System.Windows.Forms.Timer BattleTimer;
     }
 }
 

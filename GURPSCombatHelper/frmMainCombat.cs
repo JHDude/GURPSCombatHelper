@@ -16,10 +16,12 @@ namespace GURPSCombatHelper
         /// All actors currently in the fight
         /// </summary>
         private List<GURPSStats.GURPSCharacter> mActorList;
-        
+        public BattleLog bLog;
         public frmMainCombat()
         {
             InitializeComponent();
+            bLog = new BattleLog();
+            BattleTimer.Start();
         }
 
         /// <summary>
@@ -40,10 +42,36 @@ namespace GURPSCombatHelper
 
         }
 
+        /// <summary>
+        /// Adds a new character or NPC to the battle simulator
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdAddActor_Click(object sender, EventArgs e)
         {
             addActor();
         }
+
+        /// <summary>
+        /// Controls the writing to the battle log. Log can only be written to each tick
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BattleTimer_Tick(object sender, EventArgs e)
+        {
+            if (bLog.anyFresh())
+            {
+                List<string> freshLogs = bLog.getFreshLogs();
+                txtBattleLog.SuspendLayout();
+                foreach (string msg in freshLogs)
+                {
+                    txtBattleLog.AppendText(msg);
+                }
+                //txtBattleLog.Update();                
+                txtBattleLog.ScrollToCaret();
+            }
+        }
+
     }
 
     
