@@ -38,10 +38,17 @@
             this.grbBattleLog = new System.Windows.Forms.GroupBox();
             this.txtBattleLog = new System.Windows.Forms.RichTextBox();
             this.BattleTimer = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tsmiActors = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAttack = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiThrowObject = new System.Windows.Forms.ToolStripMenuItem();
             this.grbTurnOrder.SuspendLayout();
             this.grbActors.SuspendLayout();
             this.grbActions.SuspendLayout();
             this.grbBattleLog.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvwTurnOrder
@@ -50,7 +57,7 @@
             this.lvwTurnOrder.Location = new System.Drawing.Point(3, 22);
             this.lvwTurnOrder.MultiSelect = false;
             this.lvwTurnOrder.Name = "lvwTurnOrder";
-            this.lvwTurnOrder.Size = new System.Drawing.Size(252, 584);
+            this.lvwTurnOrder.Size = new System.Drawing.Size(252, 548);
             this.lvwTurnOrder.TabIndex = 0;
             this.lvwTurnOrder.UseCompatibleStateImageBehavior = false;
             this.lvwTurnOrder.View = System.Windows.Forms.View.List;
@@ -59,9 +66,9 @@
             // 
             this.grbTurnOrder.Controls.Add(this.lvwTurnOrder);
             this.grbTurnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbTurnOrder.Location = new System.Drawing.Point(585, 12);
+            this.grbTurnOrder.Location = new System.Drawing.Point(585, 48);
             this.grbTurnOrder.Name = "grbTurnOrder";
-            this.grbTurnOrder.Size = new System.Drawing.Size(258, 609);
+            this.grbTurnOrder.Size = new System.Drawing.Size(258, 573);
             this.grbTurnOrder.TabIndex = 1;
             this.grbTurnOrder.TabStop = false;
             this.grbTurnOrder.Text = "TURN ORDER";
@@ -132,11 +139,58 @@
             this.txtBattleLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.txtBattleLog.Size = new System.Drawing.Size(555, 147);
             this.txtBattleLog.TabIndex = 0;
-            this.txtBattleLog.Text = "I live once more...";
+            this.txtBattleLog.Text = "";
             // 
             // BattleTimer
             // 
             this.BattleTimer.Tick += new System.EventHandler(this.BattleTimer_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiActors,
+            this.actionsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(855, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tsmiActors
+            // 
+            this.tsmiActors.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem});
+            this.tsmiActors.Name = "tsmiActors";
+            this.tsmiActors.Size = new System.Drawing.Size(53, 20);
+            this.tsmiActors.Text = "Actors";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // actionsToolStripMenuItem
+            // 
+            this.actionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAttack,
+            this.tsmiThrowObject});
+            this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
+            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.actionsToolStripMenuItem.Text = "Actions";
+            // 
+            // tsmiAttack
+            // 
+            this.tsmiAttack.Name = "tsmiAttack";
+            this.tsmiAttack.Size = new System.Drawing.Size(146, 22);
+            this.tsmiAttack.Text = "Attack";
+            // 
+            // tsmiThrowObject
+            // 
+            this.tsmiThrowObject.Name = "tsmiThrowObject";
+            this.tsmiThrowObject.Size = new System.Drawing.Size(146, 22);
+            this.tsmiThrowObject.Text = "Throw Object";
+            this.tsmiThrowObject.Click += new System.EventHandler(this.tsmiThrowObject_Click);
             // 
             // frmMainCombat
             // 
@@ -147,13 +201,18 @@
             this.Controls.Add(this.grbActions);
             this.Controls.Add(this.grbActors);
             this.Controls.Add(this.grbTurnOrder);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMainCombat";
-            this.Text = "Form1";
+            this.Text = "GURPS Combat Helper";
             this.grbTurnOrder.ResumeLayout(false);
             this.grbActors.ResumeLayout(false);
             this.grbActions.ResumeLayout(false);
             this.grbBattleLog.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -168,6 +227,12 @@
         private System.Windows.Forms.RichTextBox txtBattleLog;
         private System.Windows.Forms.Button cmdAddActor;
         private System.Windows.Forms.Timer BattleTimer;
+        private System.Windows.Forms.ToolStripMenuItem tsmiActors;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAttack;
+        private System.Windows.Forms.ToolStripMenuItem tsmiThrowObject;
+        private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

@@ -69,12 +69,13 @@ namespace GURPSCombatHelper
         }
 
         /// <summary>
-        /// Add a new log to the logger. It hasn't been displayed, so it's Fresh
+        /// Add a new log to the logger. It hasn't been displayed, so it's Fresh.
+        /// Also automatically appends a newline character
         /// </summary>
         /// <param name="newLog">The log message to add</param>
         public void addLog(string newLog)
         {
-            mFreshLog.Add(newLog);
+            mFreshLog.Add(newLog + "\n");
         }
 
         /// <summary>

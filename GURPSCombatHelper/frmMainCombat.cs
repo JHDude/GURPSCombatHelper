@@ -22,6 +22,7 @@ namespace GURPSCombatHelper
             InitializeComponent();
             bLog = new BattleLog();
             BattleTimer.Start();
+            bLog.addLog("I live once more...");
         }
 
         /// <summary>
@@ -29,7 +30,12 @@ namespace GURPSCombatHelper
         /// </summary>
         private void addActor()
         {
+            bLog.addLog("Tracking actors is not currently supported yet. Stay tuned!");
+        }
 
+        private void attack()
+        {
+            bLog.addLog("Attacks are not currently supported yet. Stay tuned!");
         }
 
         /// <summary>
@@ -39,7 +45,7 @@ namespace GURPSCombatHelper
         /// <param name="e"></param>
         private void cmdAttack_Click(object sender, EventArgs e)
         {
-
+            attack();
         }
 
         /// <summary>
@@ -72,6 +78,22 @@ namespace GURPSCombatHelper
             }
         }
 
+        private void tsmiThrowObject_Click(object sender, EventArgs e)
+        {
+            using (var form = new frmThrowObject())
+            {
+                var result = form.ShowDialog();
+                if ((result == DialogResult.OK) && (form.ReturnVal != ""))
+                {
+                    bLog.addLog(form.ReturnVal);
+                }
+            }
+        }
+
+        private void tsmiAttack_Click(object sender, EventArgs e)
+        {
+            attack();
+        }
     }
 
     
