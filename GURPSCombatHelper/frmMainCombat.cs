@@ -15,7 +15,7 @@ namespace GURPSCombatHelper
         /// <summary>
         /// All actors currently in the fight
         /// </summary>
-        private List<GURPSStats.GURPSCharacter> mActorList;
+        //private List<GURPSStats.GURPSCharacter> mActorList;
         public BattleLog bLog;
         public frmMainCombat()
         {

@@ -9,14 +9,14 @@ namespace GURPSStats
 {
     public class GURPSCharacter
     {
-        //Primary Attributes
-        private attStrength mST;  //Strength
-        private int mDX;  //Dexterity
-        private int mIQ;  //Intelligence
-        private int mHT;  //Health
+        ////Primary Attributes
+        //private attStrength mST;  //Strength
+        //private int mDX;  //Dexterity
+        //private int mIQ;  //Intelligence
+        //private int mHT;  //Health
 
-        //Secondary attributes
-        private DiceAndModifier mThrustDamage;
-        private DiceAndModifier mSwingDamage;
+        ////Secondary attributes
+        //private DiceAndModifier mThrustDamage;
+        //private DiceAndModifier mSwingDamage;
     }
 }
