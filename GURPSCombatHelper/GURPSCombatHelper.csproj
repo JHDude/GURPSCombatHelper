@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BattleLog.cs" />
+    <Compile Include="frmAddActor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddActor.Designer.cs">
+      <DependentUpon>frmAddActor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainCombat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddActor.resx">
+      <DependentUpon>frmAddActor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainCombat.resx">
       <DependentUpon>frmMainCombat.cs</DependentUpon>
     </EmbeddedResource>
