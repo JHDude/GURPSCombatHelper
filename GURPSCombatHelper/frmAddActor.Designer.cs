@@ -439,7 +439,7 @@
             this.Controls.Add(this.grbSecondaryStats);
             this.Controls.Add(this.grbPrimaryStats);
             this.Name = "frmAddActor";
-            this.Text = "frmAddActor";
+            this.Text = "Enter Actor Stats";
             this.grbPrimaryStats.ResumeLayout(false);
             this.grbPrimaryStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHT)).EndInit();
