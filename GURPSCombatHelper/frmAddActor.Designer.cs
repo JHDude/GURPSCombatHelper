@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.grbPrimaryStats = new System.Windows.Forms.GroupBox();
-            this.lblST = new System.Windows.Forms.Label();
-            this.lblDX = new System.Windows.Forms.Label();
-            this.lblIQ = new System.Windows.Forms.Label();
-            this.lblHT = new System.Windows.Forms.Label();
-            this.nudST = new System.Windows.Forms.NumericUpDown();
-            this.nudDX = new System.Windows.Forms.NumericUpDown();
-            this.nudIQ = new System.Windows.Forms.NumericUpDown();
             this.nudHT = new System.Windows.Forms.NumericUpDown();
+            this.nudIQ = new System.Windows.Forms.NumericUpDown();
+            this.nudDX = new System.Windows.Forms.NumericUpDown();
+            this.nudST = new System.Windows.Forms.NumericUpDown();
+            this.lblHT = new System.Windows.Forms.Label();
+            this.lblIQ = new System.Windows.Forms.Label();
+            this.lblDX = new System.Windows.Forms.Label();
+            this.lblST = new System.Windows.Forms.Label();
             this.grbSecondaryStats = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -54,16 +54,33 @@
             this.txtSwingDamage = new System.Windows.Forms.TextBox();
             this.cmdOK = new System.Windows.Forms.Button();
             this.cmdCancel = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.lblBaseDodge = new System.Windows.Forms.Label();
+            this.lblBlock = new System.Windows.Forms.Label();
+            this.lblParry = new System.Windows.Forms.Label();
+            this.lblDamageReduction = new System.Windows.Forms.Label();
+            this.grbEncumberance = new System.Windows.Forms.GroupBox();
+            this.txtEncumberance = new System.Windows.Forms.TextBox();
             this.grbPrimaryStats.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudST)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIQ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIQ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudST)).BeginInit();
             this.grbSecondaryStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            this.grbEncumberance.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbPrimaryStats
@@ -84,32 +101,33 @@
             this.grbPrimaryStats.TabStop = false;
             this.grbPrimaryStats.Text = "Primary Stats";
             // 
-            // lblST
+            // nudHT
             // 
-            this.lblST.AutoSize = true;
-            this.lblST.Location = new System.Drawing.Point(12, 42);
-            this.lblST.Name = "lblST";
-            this.lblST.Size = new System.Drawing.Size(36, 20);
-            this.lblST.TabIndex = 0;
-            this.lblST.Text = "ST:";
+            this.nudHT.Location = new System.Drawing.Point(54, 136);
+            this.nudHT.Name = "nudHT";
+            this.nudHT.Size = new System.Drawing.Size(38, 26);
+            this.nudHT.TabIndex = 7;
             // 
-            // lblDX
+            // nudIQ
             // 
-            this.lblDX.AutoSize = true;
-            this.lblDX.Location = new System.Drawing.Point(9, 74);
-            this.lblDX.Name = "lblDX";
-            this.lblDX.Size = new System.Drawing.Size(39, 20);
-            this.lblDX.TabIndex = 1;
-            this.lblDX.Text = "DX:";
+            this.nudIQ.Location = new System.Drawing.Point(54, 104);
+            this.nudIQ.Name = "nudIQ";
+            this.nudIQ.Size = new System.Drawing.Size(38, 26);
+            this.nudIQ.TabIndex = 6;
             // 
-            // lblIQ
+            // nudDX
             // 
-            this.lblIQ.AutoSize = true;
-            this.lblIQ.Location = new System.Drawing.Point(15, 106);
-            this.lblIQ.Name = "lblIQ";
-            this.lblIQ.Size = new System.Drawing.Size(33, 20);
-            this.lblIQ.TabIndex = 2;
-            this.lblIQ.Text = "IQ:";
+            this.nudDX.Location = new System.Drawing.Point(54, 72);
+            this.nudDX.Name = "nudDX";
+            this.nudDX.Size = new System.Drawing.Size(38, 26);
+            this.nudDX.TabIndex = 5;
+            // 
+            // nudST
+            // 
+            this.nudST.Location = new System.Drawing.Point(54, 40);
+            this.nudST.Name = "nudST";
+            this.nudST.Size = new System.Drawing.Size(38, 26);
+            this.nudST.TabIndex = 4;
             // 
             // lblHT
             // 
@@ -120,33 +138,32 @@
             this.lblHT.TabIndex = 3;
             this.lblHT.Text = "HT:";
             // 
-            // nudST
+            // lblIQ
             // 
-            this.nudST.Location = new System.Drawing.Point(54, 40);
-            this.nudST.Name = "nudST";
-            this.nudST.Size = new System.Drawing.Size(38, 26);
-            this.nudST.TabIndex = 4;
+            this.lblIQ.AutoSize = true;
+            this.lblIQ.Location = new System.Drawing.Point(15, 106);
+            this.lblIQ.Name = "lblIQ";
+            this.lblIQ.Size = new System.Drawing.Size(33, 20);
+            this.lblIQ.TabIndex = 2;
+            this.lblIQ.Text = "IQ:";
             // 
-            // nudDX
+            // lblDX
             // 
-            this.nudDX.Location = new System.Drawing.Point(54, 72);
-            this.nudDX.Name = "nudDX";
-            this.nudDX.Size = new System.Drawing.Size(38, 26);
-            this.nudDX.TabIndex = 5;
+            this.lblDX.AutoSize = true;
+            this.lblDX.Location = new System.Drawing.Point(9, 74);
+            this.lblDX.Name = "lblDX";
+            this.lblDX.Size = new System.Drawing.Size(39, 20);
+            this.lblDX.TabIndex = 1;
+            this.lblDX.Text = "DX:";
             // 
-            // nudIQ
+            // lblST
             // 
-            this.nudIQ.Location = new System.Drawing.Point(54, 104);
-            this.nudIQ.Name = "nudIQ";
-            this.nudIQ.Size = new System.Drawing.Size(38, 26);
-            this.nudIQ.TabIndex = 6;
-            // 
-            // nudHT
-            // 
-            this.nudHT.Location = new System.Drawing.Point(54, 136);
-            this.nudHT.Name = "nudHT";
-            this.nudHT.Size = new System.Drawing.Size(38, 26);
-            this.nudHT.TabIndex = 7;
+            this.lblST.AutoSize = true;
+            this.lblST.Location = new System.Drawing.Point(12, 42);
+            this.lblST.Name = "lblST";
+            this.lblST.Size = new System.Drawing.Size(36, 20);
+            this.lblST.TabIndex = 0;
+            this.lblST.Text = "ST:";
             // 
             // grbSecondaryStats
             // 
@@ -304,11 +321,113 @@
             this.cmdCancel.Text = "Cancel";
             this.cmdCancel.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.numericUpDown5);
+            this.groupBox1.Controls.Add(this.numericUpDown6);
+            this.groupBox1.Controls.Add(this.numericUpDown7);
+            this.groupBox1.Controls.Add(this.numericUpDown8);
+            this.groupBox1.Controls.Add(this.lblBaseDodge);
+            this.groupBox1.Controls.Add(this.lblBlock);
+            this.groupBox1.Controls.Add(this.lblParry);
+            this.groupBox1.Controls.Add(this.lblDamageReduction);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 194);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 153);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Defense";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(153, 116);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(38, 26);
+            this.numericUpDown5.TabIndex = 7;
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(153, 84);
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(38, 26);
+            this.numericUpDown6.TabIndex = 6;
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.Location = new System.Drawing.Point(153, 52);
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(38, 26);
+            this.numericUpDown7.TabIndex = 5;
+            // 
+            // numericUpDown8
+            // 
+            this.numericUpDown8.Location = new System.Drawing.Point(153, 20);
+            this.numericUpDown8.Name = "numericUpDown8";
+            this.numericUpDown8.Size = new System.Drawing.Size(38, 26);
+            this.numericUpDown8.TabIndex = 4;
+            // 
+            // lblBaseDodge
+            // 
+            this.lblBaseDodge.AutoSize = true;
+            this.lblBaseDodge.Location = new System.Drawing.Point(6, 116);
+            this.lblBaseDodge.Name = "lblBaseDodge";
+            this.lblBaseDodge.Size = new System.Drawing.Size(132, 20);
+            this.lblBaseDodge.TabIndex = 3;
+            this.lblBaseDodge.Text = "BASE DODGE:";
+            // 
+            // lblBlock
+            // 
+            this.lblBlock.AutoSize = true;
+            this.lblBlock.Location = new System.Drawing.Point(6, 78);
+            this.lblBlock.Name = "lblBlock";
+            this.lblBlock.Size = new System.Drawing.Size(72, 20);
+            this.lblBlock.TabIndex = 2;
+            this.lblBlock.Text = "BLOCK:";
+            // 
+            // lblParry
+            // 
+            this.lblParry.AutoSize = true;
+            this.lblParry.Location = new System.Drawing.Point(6, 46);
+            this.lblParry.Name = "lblParry";
+            this.lblParry.Size = new System.Drawing.Size(75, 20);
+            this.lblParry.TabIndex = 1;
+            this.lblParry.Text = "PARRY:";
+            // 
+            // lblDamageReduction
+            // 
+            this.lblDamageReduction.AutoSize = true;
+            this.lblDamageReduction.Location = new System.Drawing.Point(6, 22);
+            this.lblDamageReduction.Name = "lblDamageReduction";
+            this.lblDamageReduction.Size = new System.Drawing.Size(40, 20);
+            this.lblDamageReduction.TabIndex = 0;
+            this.lblDamageReduction.Text = "DR:";
+            // 
+            // grbEncumberance
+            // 
+            this.grbEncumberance.Controls.Add(this.txtEncumberance);
+            this.grbEncumberance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEncumberance.Location = new System.Drawing.Point(242, 201);
+            this.grbEncumberance.Name = "grbEncumberance";
+            this.grbEncumberance.Size = new System.Drawing.Size(137, 59);
+            this.grbEncumberance.TabIndex = 11;
+            this.grbEncumberance.TabStop = false;
+            this.grbEncumberance.Text = "Enumberance";
+            // 
+            // txtEncumberance
+            // 
+            this.txtEncumberance.Location = new System.Drawing.Point(6, 24);
+            this.txtEncumberance.Name = "txtEncumberance";
+            this.txtEncumberance.Size = new System.Drawing.Size(100, 26);
+            this.txtEncumberance.TabIndex = 0;
+            // 
             // frmAddActor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 373);
+            this.Controls.Add(this.grbEncumberance);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.lblSwingDamage);
@@ -323,16 +442,24 @@
             this.Text = "frmAddActor";
             this.grbPrimaryStats.ResumeLayout(false);
             this.grbPrimaryStats.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudST)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIQ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIQ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudST)).EndInit();
             this.grbSecondaryStats.ResumeLayout(false);
             this.grbSecondaryStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            this.grbEncumberance.ResumeLayout(false);
+            this.grbEncumberance.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,5 +493,16 @@
         private System.Windows.Forms.TextBox txtSwingDamage;
         private System.Windows.Forms.Button cmdOK;
         private System.Windows.Forms.Button cmdCancel;
+        private System.Windows.Forms.Label lblBaseDodge;
+        private System.Windows.Forms.Label lblBlock;
+        private System.Windows.Forms.Label lblParry;
+        private System.Windows.Forms.Label lblDamageReduction;
+        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbEncumberance;
+        private System.Windows.Forms.TextBox txtEncumberance;
     }
 }
