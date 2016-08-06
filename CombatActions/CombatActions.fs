@@ -6,15 +6,15 @@ type CombatActions() =
     /// Given a strength score, calculates basic lift
     /// </summary>
     /// <param name="st"></param>
-    member private this.CalcBL (CombatActionsTypes.Strength st) =
+    member private this.CalcBL (Strength.Strength st) =
         (st * st) / 5
-        |> CombatActionsTypes.BasicLift
+        |> BasicLift.BasicLift
 
     /// <summary>
     /// Returns a tuple of #die to roll, and the modifier needed
     /// </summary>
     /// <param name="st"></param>
-    member private this.ThrustDam (CombatActionsTypes.Strength st) =
+    member private this.ThrustDam (Strength.Strength st) =
         match st with
         | 1 -> (1, -6)
         | 2 -> (1, -6)
@@ -71,10 +71,10 @@ type CombatActions() =
         | a when a > 100 -> (11 + (a%10),0)
         | _ -> (0, 0)
 
-    member private this.ThrownDamage (weight: int<CombatActionsTypes.lb>) st =
-        let bl = (this.CalcBL st) |> (fun (CombatActionsTypes.BasicLift x) -> x)
+    member private this.ThrownDamage weight st =
+        let bl = st |> this.CalcBL|> BasicLift.value
         let tDam = this.ThrustDam st
-        match weight / 1<CombatActionsTypes.lb> with
+        match weight with
         | a when a <= (bl / 8) -> (fst tDam, snd tDam + ((fst tDam) * -2) )
         | a when a <= (bl / 4) -> (fst tDam, snd tDam + ((fst tDam) * -1) )
         | a when a <= (bl / 2) -> tDam
@@ -85,8 +85,8 @@ type CombatActions() =
         | _ -> (0,0)
         ||> sprintf "For damage, roll %id%+i\n"
 
-    member this.ThrowObject st (objWeight : int<CombatActionsTypes.lb>) =
-        let bl = (fun (CombatActionsTypes.BasicLift b) -> b) (this.CalcBL st)
+    member this.ThrowObject st objWeight=
+        let bl =  st |> this.CalcBL |> BasicLift.value
         let fbl = float(bl)
         //let fmbl = fbl * 1.0<CombatActionsTypes.lb>
         let wr = float(objWeight) / fbl
@@ -114,7 +114,23 @@ type CombatActions() =
                         | a when a < 9.0 -> 0.07
                         | a when a < 10.0 -> 0.06
                         | _ -> 0.05
-                        |> (*) (float((fun (CombatActionsTypes.Strength s) -> s) st))
+                        |> (*) (st |> Strength.value |> float)
 
         (this.ThrownDamage objWeight st)
         |> (+) (sprintf "This object can be thrown %.3f yards.\n" distance)
+
+    /// <summary>
+    /// Calculates the additive penalty to dodge due to high weight
+    /// </summary>
+    /// <param name="st"></param>
+    /// <param name="weight"></param>
+    member this.CalcDodgeWeightPenalty st weight =
+        let bl = st |> this.CalcBL |> BasicLift.value
+        //Set up active pattern to match on range
+
+        match weight with
+            | a when a >= (10 * bl) -> -4
+            | a when a >= (6 * bl) -> -3
+            | a when a >= (3 * bl) -> -2
+            | a when a >= (2 * bl) -> -1
+            | _ -> 0

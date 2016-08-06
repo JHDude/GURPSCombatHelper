@@ -21,8 +21,8 @@ namespace GURPSCombatHelper
 
         private void cmdCalculate_Click(object sender, EventArgs e)
         {
-            CombatActions.CombatActions throwAction = new CombatActions.CombatActions();
-            CombatActions.CombatActionsTypes.Strength ST = CombatActions.CombatActionsTypes.Strength.NewStrength(decimal.ToInt32(nudST.Value));
+            var throwAction = new CombatActions.CombatActions();
+            var ST = CombatActions.Strength.create(decimal.ToInt32(nudST.Value));
             ReturnVal = throwAction.ThrowObject(ST, decimal.ToInt32(nudWeight.Value));
             DialogResult = DialogResult.OK;
             Close();
