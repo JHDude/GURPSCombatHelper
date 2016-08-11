@@ -310,6 +310,7 @@
             this.cmdOK.TabIndex = 8;
             this.cmdOK.Text = "OK";
             this.cmdOK.UseVisualStyleBackColor = true;
+            this.cmdOK.Click += new System.EventHandler(this.cmdOK_Click);
             // 
             // cmdCancel
             // 
@@ -320,6 +321,7 @@
             this.cmdCancel.TabIndex = 9;
             this.cmdCancel.Text = "Cancel";
             this.cmdCancel.UseVisualStyleBackColor = true;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
             // groupBox1
             // 
@@ -370,7 +372,7 @@
             // lblBaseDodge
             // 
             this.lblBaseDodge.AutoSize = true;
-            this.lblBaseDodge.Location = new System.Drawing.Point(6, 116);
+            this.lblBaseDodge.Location = new System.Drawing.Point(6, 118);
             this.lblBaseDodge.Name = "lblBaseDodge";
             this.lblBaseDodge.Size = new System.Drawing.Size(132, 20);
             this.lblBaseDodge.TabIndex = 3;
@@ -379,7 +381,7 @@
             // lblBlock
             // 
             this.lblBlock.AutoSize = true;
-            this.lblBlock.Location = new System.Drawing.Point(6, 78);
+            this.lblBlock.Location = new System.Drawing.Point(6, 86);
             this.lblBlock.Name = "lblBlock";
             this.lblBlock.Size = new System.Drawing.Size(72, 20);
             this.lblBlock.TabIndex = 2;
@@ -388,7 +390,7 @@
             // lblParry
             // 
             this.lblParry.AutoSize = true;
-            this.lblParry.Location = new System.Drawing.Point(6, 46);
+            this.lblParry.Location = new System.Drawing.Point(6, 54);
             this.lblParry.Name = "lblParry";
             this.lblParry.Size = new System.Drawing.Size(75, 20);
             this.lblParry.TabIndex = 1;
