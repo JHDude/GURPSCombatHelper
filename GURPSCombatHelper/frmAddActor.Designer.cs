@@ -55,10 +55,10 @@
             this.cmdOK = new System.Windows.Forms.Button();
             this.cmdCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.nudBaseDodge = new System.Windows.Forms.NumericUpDown();
+            this.nudBlock = new System.Windows.Forms.NumericUpDown();
+            this.nudParry = new System.Windows.Forms.NumericUpDown();
+            this.nudDR = new System.Windows.Forms.NumericUpDown();
             this.lblBaseDodge = new System.Windows.Forms.Label();
             this.lblBlock = new System.Windows.Forms.Label();
             this.lblParry = new System.Windows.Forms.Label();
@@ -76,10 +76,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBaseDodge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBlock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudParry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDR)).BeginInit();
             this.grbEncumberance.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -325,10 +325,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown5);
-            this.groupBox1.Controls.Add(this.numericUpDown6);
-            this.groupBox1.Controls.Add(this.numericUpDown7);
-            this.groupBox1.Controls.Add(this.numericUpDown8);
+            this.groupBox1.Controls.Add(this.nudBaseDodge);
+            this.groupBox1.Controls.Add(this.nudBlock);
+            this.groupBox1.Controls.Add(this.nudParry);
+            this.groupBox1.Controls.Add(this.nudDR);
             this.groupBox1.Controls.Add(this.lblBaseDodge);
             this.groupBox1.Controls.Add(this.lblBlock);
             this.groupBox1.Controls.Add(this.lblParry);
@@ -341,33 +341,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Defense";
             // 
-            // numericUpDown5
+            // nudBaseDodge
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(153, 116);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(38, 26);
-            this.numericUpDown5.TabIndex = 7;
+            this.nudBaseDodge.Location = new System.Drawing.Point(153, 116);
+            this.nudBaseDodge.Name = "nudBaseDodge";
+            this.nudBaseDodge.Size = new System.Drawing.Size(38, 26);
+            this.nudBaseDodge.TabIndex = 7;
             // 
-            // numericUpDown6
+            // nudBlock
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(153, 84);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(38, 26);
-            this.numericUpDown6.TabIndex = 6;
+            this.nudBlock.Location = new System.Drawing.Point(153, 84);
+            this.nudBlock.Name = "nudBlock";
+            this.nudBlock.Size = new System.Drawing.Size(38, 26);
+            this.nudBlock.TabIndex = 6;
             // 
-            // numericUpDown7
+            // nudParry
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(153, 52);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(38, 26);
-            this.numericUpDown7.TabIndex = 5;
+            this.nudParry.Location = new System.Drawing.Point(153, 52);
+            this.nudParry.Name = "nudParry";
+            this.nudParry.Size = new System.Drawing.Size(38, 26);
+            this.nudParry.TabIndex = 5;
             // 
-            // numericUpDown8
+            // nudDR
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(153, 20);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(38, 26);
-            this.numericUpDown8.TabIndex = 4;
+            this.nudDR.Location = new System.Drawing.Point(153, 20);
+            this.nudDR.Name = "nudDR";
+            this.nudDR.Size = new System.Drawing.Size(38, 26);
+            this.nudDR.TabIndex = 4;
             // 
             // lblBaseDodge
             // 
@@ -456,10 +456,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBaseDodge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBlock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudParry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDR)).EndInit();
             this.grbEncumberance.ResumeLayout(false);
             this.grbEncumberance.PerformLayout();
             this.ResumeLayout(false);
@@ -499,10 +499,10 @@
         private System.Windows.Forms.Label lblBlock;
         private System.Windows.Forms.Label lblParry;
         private System.Windows.Forms.Label lblDamageReduction;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown nudDR;
+        private System.Windows.Forms.NumericUpDown nudParry;
+        private System.Windows.Forms.NumericUpDown nudBlock;
+        private System.Windows.Forms.NumericUpDown nudBaseDodge;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox grbEncumberance;
         private System.Windows.Forms.TextBox txtEncumberance;
