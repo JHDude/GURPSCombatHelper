@@ -40,11 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GURPSDisadvantages.cs" />
-    <Compile Include="GURPSAdvantages.cs" />
-    <Compile Include="GURPSAttribute.cs" />
     <Compile Include="GURPSCharacter.cs" />
-    <Compile Include="GURPSSecondaryAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
