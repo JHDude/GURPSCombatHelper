@@ -7,16 +7,17 @@ using GURPSCommonConcepts;
 
 namespace GURPSStats
 {
+    /// <summary>
+    /// Contains only the necessary information to define an actor for the combat helper
+    /// </summary>
     public class GURPSCharacter
     {
-        ////Primary Attributes
-        //private attStrength mST;  //Strength
-        //private int mDX;  //Dexterity
-        //private int mIQ;  //Intelligence
-        //private int mHT;  //Health
+        public string Name { get; set; }
+        public int ST { get; set; }
+        public int DX { get; set; }
+        public int INT { get; set; }
+        public int HT { get; set; }
 
-        ////Secondary attributes
-        //private DiceAndModifier mThrustDamage;
-        //private DiceAndModifier mSwingDamage;
+
     }
 }
