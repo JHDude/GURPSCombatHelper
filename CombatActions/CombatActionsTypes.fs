@@ -16,6 +16,33 @@ module Strength =
     // Unwrapper
     let value (Strength st) = st
 
+module Dexterity =
+    type T = Dexterity of int
+
+    // Wrapper
+    let create dx = Dexterity dx
+
+    // Unwrapper
+    let value (Dexterity dx) = dx
+
+module Intelligence =
+    type T = Intelligence of int
+
+    // Wrapper
+    let create int = Intelligence int
+
+    // Unwrapper
+    let value (Intelligence int) = int
+
+module Health =
+    type T = Health of int
+
+    // Wrapper
+    let create ht = Health ht
+
+    // Unwrapper
+    let value (Health ht) = ht
+
 module BasicLift =
     type T = BasicLift of int
 
