@@ -18,6 +18,6 @@ namespace GURPSStats
         public int INT { get; set; }
         public int HT { get; set; }
 
-
+        
     }
 }

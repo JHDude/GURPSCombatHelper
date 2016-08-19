@@ -51,3 +51,27 @@ module BasicLift =
 
     // Unwrapper
     let value (BasicLift bl) = bl
+
+type WeaponType =
+    | Melee
+    | Ranged
+
+type WeaponAcc =
+    | Acc of int
+
+type WeaponParry =
+    | Parry of int
+
+type DamageType =
+    | Affliction
+    | Burning
+    | Corrosion
+    | Crushing
+    | Cutting
+    | Fatigue
+    | Impaling
+    | SmallPiercing
+    | Piercing
+    | LargePiercing
+    | HugePiercing
+    | Toxic
