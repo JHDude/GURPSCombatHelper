@@ -52,6 +52,18 @@ module BasicLift =
     // Unwrapper
     let value (BasicLift bl) = bl
 
+type NumShots = 
+    | NumShots of int
+
+type ProjectileAmount =
+    | Projectiles of int
+
+type MultiProjectileAttack =
+    {
+        N : NumShots;
+        P : ProjectileAmount;
+    }
+
 type WeaponType =
     | Melee
     | Ranged
@@ -61,6 +73,38 @@ type WeaponAcc =
 
 type WeaponParry =
     | Parry of int
+
+type WeaponROF =
+    {
+        ROF : int;
+        MxN : MultiProjectileAttack option;
+    }
+
+type WeaponRecoil =
+    | Recoil of int
+
+type SwingOrThrust =
+    | Swing
+    | Thrust
+
+type MeleeDamage =
+    {
+        Base : SwingOrThrust;
+        Mod : int;
+    }
+
+type RangeDamage =
+    {
+        Dice : int;
+        Mod : int;
+    }
+
+/// <summary>
+/// Melee Or Range Damage
+/// </summary>
+type MORDamage =
+    | Melee of MeleeDamage
+    | Range of RangeDamage
 
 type DamageType =
     | Affliction
@@ -75,3 +119,22 @@ type DamageType =
     | LargePiercing
     | HugePiercing
     | Toxic
+
+type DamageAndType =
+    {
+        Damage : MORDamage;
+        Type : DamageType;
+    }
+
+/// <summary>
+/// Lists all damage amounts / types that are linked together.
+/// Single element lists are standard attacks
+/// </summary>
+type LinkedDamage =
+    | Linked of List<DamageAndType>
+
+type WeaponDamage =
+    {
+        MainAttack : LinkedDamage;
+        AltAttacks : List<LinkedDamage> option;
+    }

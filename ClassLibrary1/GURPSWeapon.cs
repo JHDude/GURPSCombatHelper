@@ -10,7 +10,8 @@ namespace GURPSStats
     class GURPSWeapon
     {
         public WeaponType MeleeOrRange { get; set; }
-        
+        public WeaponParry Parry { get; set; }
+        public WeaponAcc Accuracy { get; set; }
 
         public GURPSWeapon( WeaponType MOR)
         {
