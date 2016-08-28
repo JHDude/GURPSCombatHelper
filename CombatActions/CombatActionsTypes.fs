@@ -138,3 +138,41 @@ type WeaponDamage =
         MainAttack : LinkedDamage;
         AltAttacks : List<LinkedDamage> option;
     }
+
+/// <summary>
+/// The various places you can hit a humanoid in GURPS
+/// </summary>
+type HitLocation =
+    | Torso
+    | Vitals
+    | Skull
+    | Eye
+    | Face
+    | Neck
+    | Groin
+    | Arm
+    | Leg
+    | Hand
+    | Foot
+    | Weapon
+
+type DamageReduction =
+    | DR of int
+
+type DefenseType = 
+    | DefendAgainst of DamageType
+
+type DRAndLocation =
+    {
+        DR : DamageReduction;
+        Location : HitLocation;
+        Types : List<DefenseType>
+    }
+
+type Armor =
+    {
+        ArmorName : string;
+        ArmorAreas : List<DRAndLocation>;
+        ArmorWeight : int;
+
+    }
