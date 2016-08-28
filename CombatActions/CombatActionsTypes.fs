@@ -52,7 +52,7 @@ module BasicLift =
     // Unwrapper
     let value (BasicLift bl) = bl
 
-type NumShots = 
+type NumShots =
     | NumShots of int
 
 type ProjectileAmount =
@@ -139,6 +139,14 @@ type WeaponDamage =
         AltAttacks : List<LinkedDamage> option;
     }
 
+type Weapon =
+    {
+        Name: string;
+        Damage : WeaponDamage;
+        Parry : WeaponParry;
+        Weight : int;
+    }
+
 /// <summary>
 /// The various places you can hit a humanoid in GURPS
 /// </summary>
@@ -159,7 +167,7 @@ type HitLocation =
 type DamageReduction =
     | DR of int
 
-type DefenseType = 
+type DefenseType =
     | DefendAgainst of DamageType
 
 type DRAndLocation =
