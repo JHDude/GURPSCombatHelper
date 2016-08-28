@@ -65,6 +65,7 @@
             this.lblDamageReduction = new System.Windows.Forms.Label();
             this.grbEncumberance = new System.Windows.Forms.GroupBox();
             this.txtEncumberance = new System.Windows.Forms.TextBox();
+            this.cmdEquipmentList = new System.Windows.Forms.Button();
             this.grbPrimaryStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIQ)).BeginInit();
@@ -409,7 +410,7 @@
             // 
             this.grbEncumberance.Controls.Add(this.txtEncumberance);
             this.grbEncumberance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbEncumberance.Location = new System.Drawing.Point(242, 201);
+            this.grbEncumberance.Location = new System.Drawing.Point(242, 129);
             this.grbEncumberance.Name = "grbEncumberance";
             this.grbEncumberance.Size = new System.Drawing.Size(137, 59);
             this.grbEncumberance.TabIndex = 11;
@@ -423,11 +424,22 @@
             this.txtEncumberance.Size = new System.Drawing.Size(100, 26);
             this.txtEncumberance.TabIndex = 0;
             // 
+            // cmdEquipmentList
+            // 
+            this.cmdEquipmentList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEquipmentList.Location = new System.Drawing.Point(242, 201);
+            this.cmdEquipmentList.Name = "cmdEquipmentList";
+            this.cmdEquipmentList.Size = new System.Drawing.Size(106, 51);
+            this.cmdEquipmentList.TabIndex = 12;
+            this.cmdEquipmentList.Text = "Equipment";
+            this.cmdEquipmentList.UseVisualStyleBackColor = true;
+            // 
             // frmAddActor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 373);
+            this.Controls.Add(this.cmdEquipmentList);
             this.Controls.Add(this.grbEncumberance);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmdCancel);
@@ -506,5 +518,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox grbEncumberance;
         private System.Windows.Forms.TextBox txtEncumberance;
+        private System.Windows.Forms.Button cmdEquipmentList;
     }
 }
