@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GURPSCommonConcepts
+﻿namespace GURPSCommonConcepts
 {
     /// <summary>
     /// Describes the number of dice to roll, and modifier to tack on for a given task
@@ -24,7 +18,7 @@ namespace GURPSCommonConcepts
         /// <summary>
         /// Creates a new dummy Dice And Modifier
         /// </summary>
-        public DiceAndModifier():this(1,0)
+        public DiceAndModifier() : this(1, 0)
         {
         }
 
@@ -62,7 +56,7 @@ namespace GURPSCommonConcepts
                 return output;
             }
         }
-        
+
         /// <summary>
         /// Calculates the amount of damage the Dice And Modifier object will do
         /// </summary>

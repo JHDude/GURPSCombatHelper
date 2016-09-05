@@ -16,7 +16,7 @@ namespace GURPSCombatHelper
         public int BaseDodge { get; set; }
 
         public float Encumberance { get; set; }
-        
+
         /// <summary>
         /// Form that allows the user to create a new actor for combat in GURPS
         /// </summary>
@@ -72,7 +72,6 @@ namespace GURPSCombatHelper
 
         private void cmdEquipmentList_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GURPSCombatHelper
@@ -17,6 +11,7 @@ namespace GURPSCombatHelper
         /// </summary>
         //private List<GURPSStats.GURPSCharacter> mActorList;
         public BattleLog bLog;
+
         public frmMainCombat()
         {
             InitializeComponent();
@@ -73,7 +68,7 @@ namespace GURPSCombatHelper
                 {
                     txtBattleLog.AppendText(msg);
                 }
-                //txtBattleLog.Update();                
+                //txtBattleLog.Update();
                 txtBattleLog.ScrollToCaret();
             }
         }
@@ -95,6 +90,4 @@ namespace GURPSCombatHelper
             attack();
         }
     }
-
-    
 }

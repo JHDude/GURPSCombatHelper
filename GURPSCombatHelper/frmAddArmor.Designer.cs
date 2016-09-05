@@ -445,7 +445,7 @@
             this.Controls.Add(this.lblArmorName);
             this.Controls.Add(this.grbArmorLocation);
             this.Name = "frmAddArmor";
-            this.Text = "frmAddArmor";
+            this.Text = "Add Armor";
             this.grbArmorLocation.ResumeLayout(false);
             this.grbHead.ResumeLayout(false);
             this.grbHead.PerformLayout();
