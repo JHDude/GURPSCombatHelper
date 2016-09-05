@@ -53,6 +53,12 @@
     <Compile Include="frmAddActor.Designer.cs">
       <DependentUpon>frmAddActor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddArmor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddArmor.Designer.cs">
+      <DependentUpon>frmAddArmor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddEquipment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddActor.resx">
       <DependentUpon>frmAddActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddArmor.resx">
+      <DependentUpon>frmAddArmor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddEquipment.resx">
       <DependentUpon>frmAddEquipment.cs</DependentUpon>

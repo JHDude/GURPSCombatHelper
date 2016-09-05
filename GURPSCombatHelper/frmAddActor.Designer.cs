@@ -433,6 +433,7 @@
             this.cmdEquipmentList.TabIndex = 12;
             this.cmdEquipmentList.Text = "Equipment";
             this.cmdEquipmentList.UseVisualStyleBackColor = true;
+            this.cmdEquipmentList.Click += new System.EventHandler(this.cmdEquipmentList_Click);
             // 
             // frmAddActor
             // 

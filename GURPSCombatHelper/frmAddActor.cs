@@ -69,5 +69,10 @@ namespace GURPSCombatHelper
             DialogResult = DialogResult.OK;
             Close();
         }
+
+        private void cmdEquipmentList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -182,5 +182,4 @@ type Armor =
         ArmorName : string;
         ArmorAreas : List<DRAndLocation>;
         ArmorWeight : int;
-
     }
