@@ -47,6 +47,21 @@
             this.cbxGroin = new System.Windows.Forms.CheckBox();
             this.cbxNeck = new System.Windows.Forms.CheckBox();
             this.cbxTorso = new System.Windows.Forms.CheckBox();
+            this.grbLimbs = new System.Windows.Forms.GroupBox();
+            this.nudLegs = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nudArms = new System.Windows.Forms.NumericUpDown();
+            this.cbxLegs = new System.Windows.Forms.CheckBox();
+            this.cbxArms = new System.Windows.Forms.CheckBox();
+            this.grbFlexible = new System.Windows.Forms.GroupBox();
+            this.rdbYes = new System.Windows.Forms.RadioButton();
+            this.rdbNo = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nudFeet = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudHands = new System.Windows.Forms.NumericUpDown();
+            this.cbxFeet = new System.Windows.Forms.CheckBox();
+            this.cbxHands = new System.Windows.Forms.CheckBox();
             this.grbArmorLocation.SuspendLayout();
             this.grbHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEyes)).BeginInit();
@@ -56,16 +71,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudGroin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNeck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTorso)).BeginInit();
+            this.grbLimbs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLegs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudArms)).BeginInit();
+            this.grbFlexible.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFeet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHands)).BeginInit();
             this.SuspendLayout();
             // 
             // grbArmorLocation
             // 
+            this.grbArmorLocation.Controls.Add(this.groupBox1);
+            this.grbArmorLocation.Controls.Add(this.grbLimbs);
             this.grbArmorLocation.Controls.Add(this.grbBody);
             this.grbArmorLocation.Controls.Add(this.grbHead);
             this.grbArmorLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbArmorLocation.Location = new System.Drawing.Point(12, 120);
+            this.grbArmorLocation.Location = new System.Drawing.Point(12, 105);
             this.grbArmorLocation.Name = "grbArmorLocation";
-            this.grbArmorLocation.Size = new System.Drawing.Size(205, 350);
+            this.grbArmorLocation.Size = new System.Drawing.Size(409, 350);
             this.grbArmorLocation.TabIndex = 0;
             this.grbArmorLocation.TabStop = false;
             this.grbArmorLocation.Text = "Location";
@@ -239,11 +263,160 @@
             this.cbxTorso.Text = "Torso";
             this.cbxTorso.UseVisualStyleBackColor = true;
             // 
+            // grbLimbs
+            // 
+            this.grbLimbs.Controls.Add(this.nudLegs);
+            this.grbLimbs.Controls.Add(this.label1);
+            this.grbLimbs.Controls.Add(this.nudArms);
+            this.grbLimbs.Controls.Add(this.cbxLegs);
+            this.grbLimbs.Controls.Add(this.cbxArms);
+            this.grbLimbs.Location = new System.Drawing.Point(205, 25);
+            this.grbLimbs.Name = "grbLimbs";
+            this.grbLimbs.Size = new System.Drawing.Size(193, 149);
+            this.grbLimbs.TabIndex = 2;
+            this.grbLimbs.TabStop = false;
+            this.grbLimbs.Text = "Limbs";
+            // 
+            // nudLegs
+            // 
+            this.nudLegs.Location = new System.Drawing.Point(121, 77);
+            this.nudLegs.Name = "nudLegs";
+            this.nudLegs.Size = new System.Drawing.Size(66, 26);
+            this.nudLegs.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(137, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "DR";
+            // 
+            // nudArms
+            // 
+            this.nudArms.Location = new System.Drawing.Point(121, 45);
+            this.nudArms.Name = "nudArms";
+            this.nudArms.Size = new System.Drawing.Size(66, 26);
+            this.nudArms.TabIndex = 3;
+            // 
+            // cbxLegs
+            // 
+            this.cbxLegs.AutoSize = true;
+            this.cbxLegs.Location = new System.Drawing.Point(7, 78);
+            this.cbxLegs.Name = "cbxLegs";
+            this.cbxLegs.Size = new System.Drawing.Size(67, 24);
+            this.cbxLegs.TabIndex = 1;
+            this.cbxLegs.Text = "Legs";
+            this.cbxLegs.UseVisualStyleBackColor = true;
+            // 
+            // cbxArms
+            // 
+            this.cbxArms.AutoSize = true;
+            this.cbxArms.Location = new System.Drawing.Point(7, 46);
+            this.cbxArms.Name = "cbxArms";
+            this.cbxArms.Size = new System.Drawing.Size(69, 24);
+            this.cbxArms.TabIndex = 0;
+            this.cbxArms.Text = "Arms";
+            this.cbxArms.UseVisualStyleBackColor = true;
+            // 
+            // grbFlexible
+            // 
+            this.grbFlexible.Controls.Add(this.rdbNo);
+            this.grbFlexible.Controls.Add(this.rdbYes);
+            this.grbFlexible.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbFlexible.Location = new System.Drawing.Point(17, 41);
+            this.grbFlexible.Name = "grbFlexible";
+            this.grbFlexible.Size = new System.Drawing.Size(132, 58);
+            this.grbFlexible.TabIndex = 3;
+            this.grbFlexible.TabStop = false;
+            this.grbFlexible.Text = "Flexible?";
+            // 
+            // rdbYes
+            // 
+            this.rdbYes.AutoSize = true;
+            this.rdbYes.Location = new System.Drawing.Point(8, 25);
+            this.rdbYes.Name = "rdbYes";
+            this.rdbYes.Size = new System.Drawing.Size(58, 24);
+            this.rdbYes.TabIndex = 0;
+            this.rdbYes.TabStop = true;
+            this.rdbYes.Text = "Yes";
+            this.rdbYes.UseVisualStyleBackColor = true;
+            // 
+            // rdbNo
+            // 
+            this.rdbNo.AutoSize = true;
+            this.rdbNo.Location = new System.Drawing.Point(72, 25);
+            this.rdbNo.Name = "rdbNo";
+            this.rdbNo.Size = new System.Drawing.Size(49, 24);
+            this.rdbNo.TabIndex = 1;
+            this.rdbNo.TabStop = true;
+            this.rdbNo.Text = "No";
+            this.rdbNo.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.nudFeet);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.nudHands);
+            this.groupBox1.Controls.Add(this.cbxFeet);
+            this.groupBox1.Controls.Add(this.cbxHands);
+            this.groupBox1.Location = new System.Drawing.Point(205, 180);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(193, 149);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Extremities";
+            // 
+            // nudFeet
+            // 
+            this.nudFeet.Location = new System.Drawing.Point(121, 77);
+            this.nudFeet.Name = "nudFeet";
+            this.nudFeet.Size = new System.Drawing.Size(66, 26);
+            this.nudFeet.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(137, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "DR";
+            // 
+            // nudHands
+            // 
+            this.nudHands.Location = new System.Drawing.Point(121, 45);
+            this.nudHands.Name = "nudHands";
+            this.nudHands.Size = new System.Drawing.Size(66, 26);
+            this.nudHands.TabIndex = 3;
+            // 
+            // cbxFeet
+            // 
+            this.cbxFeet.AutoSize = true;
+            this.cbxFeet.Location = new System.Drawing.Point(7, 78);
+            this.cbxFeet.Name = "cbxFeet";
+            this.cbxFeet.Size = new System.Drawing.Size(65, 24);
+            this.cbxFeet.TabIndex = 1;
+            this.cbxFeet.Text = "Feet";
+            this.cbxFeet.UseVisualStyleBackColor = true;
+            // 
+            // cbxHands
+            // 
+            this.cbxHands.AutoSize = true;
+            this.cbxHands.Location = new System.Drawing.Point(7, 46);
+            this.cbxHands.Name = "cbxHands";
+            this.cbxHands.Size = new System.Drawing.Size(80, 24);
+            this.cbxHands.TabIndex = 0;
+            this.cbxHands.Text = "Hands";
+            this.cbxHands.UseVisualStyleBackColor = true;
+            // 
             // frmAddArmor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 482);
+            this.ClientSize = new System.Drawing.Size(431, 465);
+            this.Controls.Add(this.grbFlexible);
             this.Controls.Add(this.txtArmorName);
             this.Controls.Add(this.lblArmorName);
             this.Controls.Add(this.grbArmorLocation);
@@ -260,6 +433,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudGroin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNeck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTorso)).EndInit();
+            this.grbLimbs.ResumeLayout(false);
+            this.grbLimbs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLegs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudArms)).EndInit();
+            this.grbFlexible.ResumeLayout(false);
+            this.grbFlexible.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFeet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHands)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +469,20 @@
         private System.Windows.Forms.CheckBox cbxFace;
         private System.Windows.Forms.CheckBox cbxSkull;
         private System.Windows.Forms.CheckBox cbxEyes;
+        private System.Windows.Forms.GroupBox grbLimbs;
+        private System.Windows.Forms.NumericUpDown nudLegs;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown nudArms;
+        private System.Windows.Forms.CheckBox cbxLegs;
+        private System.Windows.Forms.CheckBox cbxArms;
+        private System.Windows.Forms.GroupBox grbFlexible;
+        private System.Windows.Forms.RadioButton rdbNo;
+        private System.Windows.Forms.RadioButton rdbYes;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown nudFeet;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nudHands;
+        private System.Windows.Forms.CheckBox cbxFeet;
+        private System.Windows.Forms.CheckBox cbxHands;
     }
 }
