@@ -62,6 +62,8 @@
             this.nudHands = new System.Windows.Forms.NumericUpDown();
             this.cbxFeet = new System.Windows.Forms.CheckBox();
             this.cbxHands = new System.Windows.Forms.CheckBox();
+            this.cmdOK = new System.Windows.Forms.Button();
+            this.cmdCancel = new System.Windows.Forms.Button();
             this.grbArmorLocation.SuspendLayout();
             this.grbHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEyes)).BeginInit();
@@ -411,11 +413,33 @@
             this.cbxHands.Text = "Hands";
             this.cbxHands.UseVisualStyleBackColor = true;
             // 
+            // cmdOK
+            // 
+            this.cmdOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdOK.Location = new System.Drawing.Point(255, 466);
+            this.cmdOK.Name = "cmdOK";
+            this.cmdOK.Size = new System.Drawing.Size(77, 53);
+            this.cmdOK.TabIndex = 4;
+            this.cmdOK.Text = "OK";
+            this.cmdOK.UseVisualStyleBackColor = true;
+            // 
+            // cmdCancel
+            // 
+            this.cmdCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancel.Location = new System.Drawing.Point(338, 466);
+            this.cmdCancel.Name = "cmdCancel";
+            this.cmdCancel.Size = new System.Drawing.Size(83, 53);
+            this.cmdCancel.TabIndex = 5;
+            this.cmdCancel.Text = "Cancel";
+            this.cmdCancel.UseVisualStyleBackColor = true;
+            // 
             // frmAddArmor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 465);
+            this.ClientSize = new System.Drawing.Size(431, 531);
+            this.Controls.Add(this.cmdCancel);
+            this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.grbFlexible);
             this.Controls.Add(this.txtArmorName);
             this.Controls.Add(this.lblArmorName);
@@ -484,5 +508,7 @@
         private System.Windows.Forms.NumericUpDown nudHands;
         private System.Windows.Forms.CheckBox cbxFeet;
         private System.Windows.Forms.CheckBox cbxHands;
+        private System.Windows.Forms.Button cmdOK;
+        private System.Windows.Forms.Button cmdCancel;
     }
 }
